@@ -18,6 +18,8 @@ struct input
 
 class piece
 {
+protected:
+	attributes attrib;
 public:
 	virtual void set_attrib(attributes) = 0;
 	virtual attributes get_attrib() = 0;
@@ -27,9 +29,6 @@ public:
 
 class pawn:public piece
 {
-private:
-	attributes attrib;
-
 public:
 	void set_attrib(attributes)override;
 	attributes get_attrib()override;
@@ -38,9 +37,6 @@ public:
 
 class rook:public piece
 {
-private:
-	attributes attrib;
-
 public:
 	void set_attrib(attributes)override;
 	attributes get_attrib()override;
@@ -49,9 +45,6 @@ public:
 
 class knight:public piece
 {
-private:
-	attributes attrib;
-
 public:
 	void set_attrib(attributes)override;
 	attributes get_attrib()override;
@@ -60,8 +53,6 @@ public:
 
 class bishop:public piece
 {
-private:
-	attributes attrib;
 
 public:
 	void set_attrib(attributes)override;
@@ -71,8 +62,6 @@ public:
 
 class queen:public piece
 {
-private:
-	attributes attrib;
 
 public:
 	void set_attrib(attributes)override;
@@ -82,8 +71,6 @@ public:
 
 class king:public piece
 {
-private:
-	attributes attrib;
 
 public:
 	void set_attrib(attributes)override;
